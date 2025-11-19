@@ -100,7 +100,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
               <ImageIcon className="h-16 w-16 text-sky-400 mb-4" />
               <p className="text-lg font-medium text-gray-700 mb-2">Click to upload product image</p>
               <p className="text-sm text-gray-500 mb-1">or drag and drop</p>
-              <p className="text-xs text-gray-400">JPEG, PNG, WebP, GIF (max 5MB)</p>
+              <p className="text-xs text-gray-400">All image formats (JPG, PNG, WebP, GIF, BMP, TIFF, SVG, HEIC) - max 10MB</p>
             </>
           )}
         </div>
@@ -109,7 +109,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
       <input
         ref={fileInputRef}
         type="file"
-        accept="image/jpeg,image/jpg,image/png,image/webp,image/gif,image/*"
+        accept="image/*"
         onChange={handleFileSelect}
         className="hidden"
         disabled={uploading}
