@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
 
   // Contact Links
   const whatsappMessage = encodeURIComponent('Hi! I would like to inquire about your products.');
-  const whatsappUrl = `https://wa.me/639062349763?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/639357838505?text=${whatsappMessage}`;
 
   return (
     <footer className="bg-white border-t border-gray-100 pt-12 pb-6">

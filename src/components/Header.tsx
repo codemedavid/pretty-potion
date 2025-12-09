@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartClick, onMenuClic
 
   // Contact Links
   const whatsappMessage = encodeURIComponent('Hi! I am interested in your products.');
-  const whatsappUrl = `https://wa.me/639062349763?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/639357838505?text=${whatsappMessage}`;
 
   return (
     <>
