@@ -7,44 +7,44 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Minimalist Modern Theme
-        'theme-bg': '#F1EFE7',      // Cream/Base
-        'theme-text': '#1E1E1E',    // Charcoal/Dark
-        'theme-accent': '#6DA8A1',  // Teal
-        'theme-secondary': '#C38E70', // Terracotta
+        // Soft Pink Modern Theme
+        'theme-bg': '#fff7fb',        // Powder pink base
+        'theme-text': '#2b1226',      // Deep plum text
+        'theme-accent': '#f472b6',    // Vibrant pink
+        'theme-secondary': '#f9a8d4', // Soft blush
 
         // Mapping standard colors to the new theme for compatibility
         primary: {
-          50: '#F1EFE7',
-          100: '#EAE8DE',
-          200: '#DDDBCF',
-          300: '#C38E70', // Using secondary as a mid-tone
-          400: '#9B7460',
-          500: '#1E1E1E', // Using dark as primary
-          600: '#1A1A1A',
-          700: '#151515',
-          800: '#101010',
-          900: '#000000',
+          50: '#fff7fb',
+          100: '#ffeef6',
+          200: '#fbd5e8',
+          300: '#f9a8d4',
+          400: '#f472b6',
+          500: '#bf125d',
+          600: '#9d174d',
+          700: '#831843',
+          800: '#6b0f38',
+          900: '#2b1226',
         },
         // Deprecating gold but mapping to secondary/accent to prevent breaks
         gold: {
-          50: '#F1EFE7',
-          100: '#E0F0EE', // Light teal tint
-          200: '#BFE0DC',
-          300: '#9BCEC7',
-          400: '#6DA8A1', // Accent
-          500: '#C38E70', // Secondary
-          600: '#A8795E',
-          700: '#8D644D',
-          800: '#724F3C',
-          900: '#1E1E1E',
+          50: '#fff7fb',
+          100: '#ffe5ef',
+          200: '#fcc9e0',
+          300: '#f9a8d4',
+          400: '#f472b6',
+          500: '#ec4899',
+          600: '#db2777',
+          700: '#be185d',
+          800: '#9d174d',
+          900: '#2b1226',
         },
         accent: {
-          light: '#9BCEC7',
-          DEFAULT: '#6DA8A1',
-          dark: '#588D87',
+          light: '#fbcfe8',
+          DEFAULT: '#f472b6',
+          dark: '#db2777',
           white: '#ffffff',
-          black: '#1E1E1E',
+          black: '#2b1226',
         },
       },
       fontFamily: {

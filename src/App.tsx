@@ -11,11 +11,14 @@ import FloatingCartButton from './components/FloatingCartButton';
 import Footer from './components/Footer';
 import AdminDashboard from './components/AdminDashboard';
 import COA from './components/COA';
-import FAQ from './components/FAQ';
 import { useMenu } from './hooks/useMenu';
 import { useCOAPageSetting } from './hooks/useCOAPageSetting';
 
-function MainApp() {
+type MainAppProps = {
+  coaPageEnabled: boolean;
+};
+
+function MainApp({ coaPageEnabled }: MainAppProps) {
   const cart = useCart();
   const { menuItems, refreshProducts } = useMenu();
   const [currentView, setCurrentView] = React.useState<'menu' | 'cart' | 'checkout'>('menu');
@@ -58,6 +61,7 @@ function MainApp() {
             addToCart={cart.addToCart}
             cartItems={cart.cartItems}
             updateQuantity={cart.updateQuantity}
+            showCOALink={coaPageEnabled}
           />
         )}
 
@@ -101,9 +105,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MainApp />} />
+        <Route path="/" element={<MainApp coaPageEnabled={coaPageEnabled} />} />
         {coaPageEnabled && <Route path="/coa" element={<COA />} />}
-        <Route path="/faq" element={<FAQ />} />
         <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
     </Router>

@@ -10,9 +10,10 @@ interface MenuProps {
   addToCart: (product: Product, variation?: ProductVariation, quantity?: number) => void;
   cartItems: CartItem[];
   updateQuantity: (index: number, quantity: number) => void;
+  showCOALink?: boolean;
 }
 
-const Menu: React.FC<MenuProps> = ({ menuItems, addToCart, cartItems }) => {
+const Menu: React.FC<MenuProps> = ({ menuItems, addToCart, cartItems, showCOALink = true }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'purity'>('name');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -61,6 +62,7 @@ const Menu: React.FC<MenuProps> = ({ menuItems, addToCart, cartItems }) => {
 
       <div className="min-h-screen bg-theme-bg">
         <Hero
+          showCOALink={showCOALink}
           onShopAll={() => {
             productsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }}

@@ -19,16 +19,16 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-100">
               <img
-                src="/assets/logo.jpg"
-                alt="peptalk.ph"
+                src="/logo.jpeg"
+                alt="Pretty Potion"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="text-left">
               <div className="font-bold text-theme-text text-lg tracking-tight">
-                peptalk.ph
+                Pretty Potion
               </div>
-              <div className="text-xs text-gray-500">Peptides & Essentials</div>
+              <div className="text-xs text-gray-500">Be fit • Stop your excuses</div>
             </div>
           </div>
 
@@ -43,13 +43,6 @@ const Footer: React.FC = () => {
                 <span>Lab Reports</span>
               </a>
             )}
-            <a
-              href="/faq"
-              className="flex items-center gap-2 text-gray-600 hover:text-theme-accent transition-colors text-sm font-medium"
-            >
-              <HelpCircle className="w-4 h-4" />
-              <span>FAQ</span>
-            </a>
             <a
               href={whatsappUrl}
               target="_blank"
@@ -68,7 +61,7 @@ const Footer: React.FC = () => {
           <p className="text-xs text-gray-400 flex items-center justify-center gap-1">
             Made with
             <Heart className="w-3 h-3 text-theme-secondary fill-theme-secondary" />
-            © {currentYear} peptalk.ph.
+            © {currentYear} Pretty Potion.
           </p>
         </div>
       </div>

@@ -145,7 +145,7 @@ const SiteSettingsManager: React.FC = () => {
           <div className="flex items-center space-x-4">
             <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
               <img
-                src={logoPreview || '/logo.jpg'}
+                src={logoPreview || '/logo.jpeg'}
                 alt="Site Logo"
                 className="w-full h-full object-cover"
               />

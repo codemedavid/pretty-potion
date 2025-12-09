@@ -29,19 +29,19 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartClick, onMenuClic
               <div className="relative flex-shrink-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border border-gray-200">
                   <img
-                    src="/assets/logo.jpg"
-                    alt="peptalk.ph"
+                    src="/logo.jpeg"
+                    alt="Pretty Potion"
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
               <div className="text-left min-w-0 flex-1">
                 <h1 className="text-lg sm:text-xl font-bold text-theme-text leading-tight whitespace-nowrap overflow-hidden text-ellipsis tracking-tight">
-                  peptalk.ph
+                  Pretty Potion
                 </h1>
                 <p className="text-xs text-gray-500 font-medium flex items-center gap-1">
                   <span className="whitespace-nowrap overflow-hidden text-ellipsis">
-                    Peptides & Essentials
+                    Be fit • Stop your excuses
                   </span>
                 </p>
               </div>
@@ -65,12 +65,6 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartClick, onMenuClic
                     Lab Reports
                   </a>
                 )}
-                <a
-                  href="/faq"
-                  className="text-sm font-medium text-gray-600 hover:text-theme-accent transition-colors"
-                >
-                  FAQ
-                </a>
                 <a
                   href={whatsappUrl}
                   target="_blank"
@@ -139,13 +133,6 @@ const Header: React.FC<HeaderProps> = ({ cartItemsCount, onCartClick, onMenuClic
                     Lab Reports
                   </a>
                 )}
-                <a
-                  href="/faq"
-                  className="text-left text-theme-text font-medium text-base hover:text-theme-accent transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  FAQ
-                </a>
                 <div className="pt-4 border-t border-gray-100 flex flex-col gap-3">
                   <a
                     href={whatsappUrl}

@@ -5,21 +5,21 @@
 @tailwind utilities;
 
 :root {
-  /* Minimalist Modern Theme */
-  --theme-bg: #F1EFE7;
-  --theme-text: #1E1E1E;
-  --theme-accent: #6DA8A1;
-  --theme-secondary: #C38E70;
+  /* Soft Pink Modern Theme */
+  --theme-bg: #fff7fb;
+  --theme-text: #2b1226;
+  --theme-accent: #f472b6;
+  --theme-secondary: #f9a8d4;
   
-  --primary-black: #1E1E1E;
+  --primary-black: #2b1226;
   --primary-white: #ffffff;
   
-  --gray-50: #F1EFE7;
-  --gray-100: #EAE8DE;
-  --gray-200: #DDDBCF;
-  --gray-300: #C0BEB5;
-  --gray-500: #888888;
-  --gray-900: #1E1E1E;
+  --gray-50: #fff7fb;
+  --gray-100: #ffeef6;
+  --gray-200: #fbd5e8;
+  --gray-300: #f5b8d7;
+  --gray-500: #d77fa7;
+  --gray-900: #2b1226;
 }
 
 * {

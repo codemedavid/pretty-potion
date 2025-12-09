@@ -3,9 +3,10 @@ import { ArrowRight, ShieldCheck, Sparkles, FlaskConical } from 'lucide-react';
 
 type HeroProps = {
   onShopAll?: () => void;
+  showCOALink?: boolean;
 };
 
-const Hero: React.FC<HeroProps> = ({ onShopAll }) => {
+const Hero: React.FC<HeroProps> = ({ onShopAll, showCOALink = true }) => {
   return (
     <div className="relative overflow-hidden bg-theme-bg pt-12 pb-16 md:pt-20 md:pb-24 lg:pt-28 lg:pb-32">
       {/* Abstract Background Shape */}
@@ -22,25 +23,25 @@ const Hero: React.FC<HeroProps> = ({ onShopAll }) => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-secondary"></span>
             </span>
             <span className="text-xs md:text-sm font-medium text-gray-600 tracking-wide">
-              Peptides & Essentials
+              Glow & Wellness
             </span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-theme-text mb-4 md:mb-6 tracking-tight leading-tight">
-            Premium <span className="text-theme-accent">Peptides</span> & Essentials
+            Be fit
             <br className="hidden md:block" />
-            <span className="text-2xl md:text-3xl lg:text-4xl font-medium text-gray-600">— Trusted Quality for Your Journey.</span>
+            <span className="text-2xl md:text-3xl lg:text-4xl font-medium text-theme-accent">Stop your excuses</span>
           </h1>
 
           {/* Tagline */}
           <p className="text-sm md:text-base text-theme-accent font-medium mb-4 md:mb-6">
-            Quality-tested products. Reliable performance. Trusted by our community.
+            A playful, feminine take on premium wellness essentials.
           </p>
 
           {/* Subheading */}
           <p className="text-base md:text-lg text-gray-500 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
-            Explore our carefully curated selection of high-quality peptides, peptide pens, cartridges, pen needles, and insulin syringes. Each product is personally tested and trusted for purity, safety, and performance — so you can pin with confidence.
+            Explore our curated selection of science-backed beauty and wellness support. Gentle hues, modern lines, and reliable quality to keep you glowing without excuses.
           </p>
 
           {/* CTA Buttons */}
@@ -52,13 +53,15 @@ const Hero: React.FC<HeroProps> = ({ onShopAll }) => {
               Shop All Products
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <a
-              href="/coa"
-              className="px-8 py-3 rounded-lg font-medium text-theme-text hover:text-theme-accent transition-colors flex items-center gap-2 w-full sm:w-auto justify-center"
-            >
-              View Lab Tests & Quality Assurance
-              <ShieldCheck className="w-4 h-4" />
-            </a>
+            {showCOALink && (
+              <a
+                href="/coa"
+                className="px-8 py-3 rounded-lg font-medium text-theme-text hover:text-theme-accent transition-colors flex items-center gap-2 w-full sm:w-auto justify-center"
+              >
+                View Lab Tests & Quality Assurance
+                <ShieldCheck className="w-4 h-4" />
+              </a>
+            )}
           </div>
 
           {/* Trust Indicators - Horizontal scrollable on mobile */}

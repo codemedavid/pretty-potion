@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Edit, Trash2, Save, X, ArrowLeft, TrendingUp, Package, Users, FolderOpen, CreditCard, Sparkles, Layers, Shield, RefreshCw, Warehouse, ShoppingCart, HelpCircle, MapPin } from 'lucide-react';
+import { Plus, Edit, Trash2, Save, X, ArrowLeft, TrendingUp, Package, Users, FolderOpen, CreditCard, Sparkles, Layers, Shield, RefreshCw, Warehouse, ShoppingCart, MapPin } from 'lucide-react';
 import type { Product } from '../types';
 import { useMenu } from '../hooks/useMenu';
 import { useCategories } from '../hooks/useCategories';
@@ -10,7 +10,6 @@ import VariationManager from './VariationManager';
 import COAManager from './COAManager';
 import PeptideInventoryManager from './PeptideInventoryManager';
 import OrdersManager from './OrdersManager';
-import FAQManager from './FAQManager';
 import ShippingManager from './ShippingManager';
 
 const AdminDashboard: React.FC = () => {
@@ -21,7 +20,7 @@ const AdminDashboard: React.FC = () => {
   const [loginError, setLoginError] = useState('');
   const { products, loading, addProduct, updateProduct, deleteProduct, refreshProducts } = useMenu();
   const { categories } = useCategories();
-  const [currentView, setCurrentView] = useState<'dashboard' | 'products' | 'add' | 'edit' | 'categories' | 'payments' | 'coa' | 'inventory' | 'orders' | 'faq' | 'shipping'>('dashboard');
+  const [currentView, setCurrentView] = useState<'dashboard' | 'products' | 'add' | 'edit' | 'categories' | 'payments' | 'coa' | 'inventory' | 'orders' | 'shipping'>('dashboard');
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [managingVariationsProductId, setManagingVariationsProductId] = useState<string | null>(null);
@@ -369,8 +368,8 @@ const AdminDashboard: React.FC = () => {
           <div className="text-center mb-6">
             <div className="relative mx-auto w-16 h-16 rounded-full overflow-hidden mb-4 border-2 border-theme-accent/30">
               <img
-                src="/assets/logo.jpg"
-                alt="peptalk.ph"
+              src="/logo.jpeg"
+              alt="Pretty Potion"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -1089,34 +1088,6 @@ const AdminDashboard: React.FC = () => {
     return <OrdersManager onBack={() => setCurrentView('dashboard')} />;
   }
 
-  // FAQ View
-  if (currentView === 'faq') {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-white">
-        <div className="bg-white shadow-md border-b border-gold-300/30">
-          <div className="max-w-6xl mx-auto px-3 sm:px-4">
-            <div className="flex items-center justify-between h-12 md:h-14">
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={() => setCurrentView('dashboard')}
-                  className="text-gray-700 hover:text-gold-600 transition-colors flex items-center gap-1 group"
-                >
-                  <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-                  <span className="text-xs md:text-sm">Dashboard</span>
-                </button>
-                <h1 className="text-sm md:text-base font-bold bg-gradient-to-r from-black to-gray-900 bg-clip-text text-transparent">❓ FAQ Management</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="max-w-5xl mx-auto px-3 sm:px-4 py-3 md:py-4">
-          <FAQManager />
-        </div>
-      </div>
-    );
-  }
-
   // Shipping View
   if (currentView === 'shipping') {
     return <ShippingManager onBack={() => setCurrentView('dashboard')} />;
@@ -1133,14 +1104,14 @@ const AdminDashboard: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <div className="w-9 h-9 rounded-full overflow-hidden border border-gray-200">
                   <img
-                    src="/assets/logo.jpg"
-                    alt="peptalk.ph"
+                    src="/logo.jpeg"
+                    alt="Pretty Potion"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
                   <h1 className="text-base font-bold text-theme-text">
-                    peptalk.ph
+                    Pretty Potion
                   </h1>
                   <p className="text-xs text-gray-500">
                     Admin Dashboard
@@ -1300,15 +1271,6 @@ const AdminDashboard: React.FC = () => {
                     <ShoppingCart className="h-4 w-4 text-theme-accent" />
                   </div>
                   <span className="text-sm font-medium text-gray-700">Orders Management</span>
-                </button>
-                <button
-                  onClick={() => setCurrentView('faq')}
-                  className="w-full flex items-center gap-3 p-2 text-left hover:bg-gray-50 rounded-lg transition-all"
-                >
-                  <div className="p-1.5 bg-yellow-50 rounded-lg">
-                    <HelpCircle className="h-4 w-4 text-yellow-600" />
-                  </div>
-                  <span className="text-sm font-medium text-gray-700">FAQ Management</span>
                 </button>
                 <button
                   onClick={() => setCurrentView('shipping')}

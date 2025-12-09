@@ -155,7 +155,7 @@ const Checkout: React.FC<CheckoutProps> = ({ cartItems, totalPrice, onBack }) =>
       });
 
       const orderDetails = `
-✨PeptalkPH - NEW ORDER
+✨Pretty Potion - NEW ORDER
 
 📅 ORDER DATE & TIME
 ${dateTimeStamp}
@@ -196,7 +196,7 @@ ${paymentMethod ? `Account: ${paymentMethod.account_number}` : ''}
 Please attach your payment screenshot when sending this message.
 
 📱 CONTACT METHOD
-WhatsApp: https://wa.me/639062349763
+WhatsApp: https://wa.me/639357838505
 
 📋 ORDER ID: ${orderData.id}
 
