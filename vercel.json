@@ -1,0 +1,11 @@
+{
+    "buildCommand": "cd peptalkph && npm install && npm run build",
+    "outputDirectory": "peptalkph/dist",
+    "installCommand": "cd peptalkph && npm install",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
